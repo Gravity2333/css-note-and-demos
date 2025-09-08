@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 当表现为shrnk-to-fit 时，盒子的尺寸最小值为其中文本占的最小宽度, 对于英文为连续的英文单词长度，对于中文为一个汉字的宽度！
+如下代码，我么设置容器宽度为0，由于shunk-to-fit状态下宽度最大为包含块的宽度，此时包含块宽度为0，其中行内块的宽度不会为0，会首选其中文字最小的宽度作为其宽度！ -->
+<body>
+    <style>
+        .container {
+            background-color: red;
+            width: 0px;
+            white-space: nowrap;
+        }
+
+        .box {
+            background-color: lightblue;
+            display: inline-block;
+        }
+    </style>
+    <div class="container">
+        <div class="box">哈哈哈哈</div>
+        <div class="box">hello world!</div>
+        <div class="box">哈哈哈哈</div>
+        <div class="box">hello world!</div>
+        <div class="box">哈哈哈哈</div>
+        <div class="box">hello world!</div>
+        <div class="box">哈哈哈哈</div>
+        <div class="box">hello world!</div>
+        <div class="box">哈哈哈哈</div>
+        <div class="box">hello world!</div>
+    </div>
+</body>
+
+</html>

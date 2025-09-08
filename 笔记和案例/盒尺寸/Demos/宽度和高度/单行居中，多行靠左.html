@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 基本原理为
+如果用 span包裹内容，那么span生成行内盒，参与构建IFC，所以即便换行，每一行都要遵循text-align 要么都居中，要么都靠左
+如果用 inline-block 由于生成了原子行内级盒子，其本身不参与构建IFC，由于不可以拆分，也不会换行，在iFC看来就是一个占一行的元素
+在其内部，可以用text-align left
+
+当文本少的时候，行内块占用的宽度也少，由于本身是shrink-to-fit的，所以其宽度也就是文字的宽度，看上去是居中的
+当文本多的时候，行内块最大可以扩大到包含块 container的宽度，然后其内部文本就需要换行，但是在外层container创建的IFC看来，其还是一行元素，只是高度变高了，不会对换行的文本应用 text-align center
+所以其内部就遵循内部容器盒子的text-align left 排布了！ -->
+<body>
+    <style>
+        .container {
+            width: 300px;
+            height: 300px;
+            background-color: lightcyan;
+            text-align: center;
+        }
+
+        .box {
+            margin-top: 10px;
+            display: inline-block;
+            background-color: yellow;
+            text-align: left;
+        }
+    </style>
+    <div class="container">
+        <span>元素换行之后，也不会靠左，会一直居中显示！ 因为参与生成IFC，横向排布取决于text-align!!</span>
+        </br>
+        <div class="box">单行！</div>
+        </br>
+        <div class="box">
+            !!!如果需要单行局中，多行靠左，可以用行内块 因为其是原子行内元素，其本身不会换行，在IFC看来，行内块是一行内的元素
+        </div>
+    </div>
+</body>
+
+</html>
