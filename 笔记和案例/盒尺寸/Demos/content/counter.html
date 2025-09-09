@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            counter-reset: Chapter 0 Section 0;
+            /* // counter-reset: Section; 不能写这里 会覆盖上面的 */
+        }
+
+        h1 {
+            counter-increment: Chapter 1;
+        }
+
+        h1::before {
+            content: counter(Chapter) ". ";
+        }
+
+        h2 {
+            counter-increment: Section;
+        }
+
+        h2::before {
+            content: counter(Section) ". ";
+        }
+    </style>
+
+
+    <h1>H1</h1>
+    <h2> Section 1</h2>
+    <h2> Section 2</h2>
+    <h2> Section 3</h2>
+    <h1>H2</h1>
+    <h2> Section 1</h2>
+    <h2> Section 2</h2>
+    <h2> Section 3</h2>
+</body>
+
+</html>

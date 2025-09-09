@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            width: 500px;
+            background-color: lightblue;
+            /* justify 对单行不起作用 */
+            text-align: justify;
+            font-size: 0;
+
+        }
+
+        .container::before {
+            content: '';
+            line-height: 600px;
+        }
+
+        .container::after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+            line-height: 0;
+        }
+
+        .bar {
+            display: inline-block;
+            width: 50px;
+            background-color: lightcoral;
+            border: 1px solid black;
+            vertical-align: bottom;
+        }
+    </style>
+    <div class="container">
+        <div class="bar" style="height: 300px;"></div>
+        <div class="bar" style="height: 100px;"></div>
+        <div class="bar" style="height: 400px;"></div>
+        <div class="bar" style="height: 40px;"></div>
+        <div class="bar" style="height: 110px;"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .dot {
+            height: 1em;
+            line-height: 1;
+            text-align: left;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .dot::after {
+            display: inline-block;
+            content: '...\A..\A.\A';
+            white-space: pre-wrap;
+            animation: 3s dot infinite step-start both;
+        }
+
+        @keyframes dot {
+            33% {
+                transform: translateY(-2em);
+            }
+
+            66% {
+                transform: translateY(-1em);
+            }
+
+        }
+    </style>
+    loading<span class="dot"></span>
+</body>
+
+</html>
