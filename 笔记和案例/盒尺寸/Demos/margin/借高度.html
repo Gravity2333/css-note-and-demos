@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            width: 400px;
+            overflow: hidden;
+        }
+
+        .left{
+            float: left;
+            width: 50%;
+            min-height: 200px;
+            margin-bottom: -9999px;
+            padding-bottom: 9999px;
+            background-color: lightcoral;
+        }
+
+        .right{
+            width: 50%;
+            float: left;
+            min-height: 200px;
+            margin-bottom: -9999px;
+            padding-bottom: 9999px;
+            background-color: lightskyblue;
+        }
+    </style>
+    <div class="container">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+
+    <button id="leftBtn">left </button>
+    <button id="rightBtn">right </button>
+   
+    <script>
+        const leftBtn = document.querySelector('#leftBtn')
+        const rightBtn = document.querySelector('#rightBtn')
+        const left = document.querySelector('.left')
+        const right = document.querySelector('.right')
+
+        leftBtn.addEventListener('click',()=>{
+            const e = document.createElement('div')
+            e.innerText ='left'
+            e.setAttribute('height','50px')
+            left.appendChild(e)
+        })
+
+        rightBtn.addEventListener('click',()=>{
+            const e = document.createElement('div')
+            e.innerText ='right'
+            e.setAttribute('height','50px')
+            right.appendChild(e)
+        })
+    </script>
+</body>
+</html>

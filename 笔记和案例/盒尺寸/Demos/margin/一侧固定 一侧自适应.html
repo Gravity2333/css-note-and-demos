@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        .left-container {
+            width: 800px;
+            height: 500px;
+            background-color: lightcyan;
+        }
+
+        .left-container>.left {
+            height: 100%;
+            float: left;
+            width: 200px;
+            background-color: rgb(11, 91, 211);
+        }
+
+        .left-container>.right {
+            height: 100%;
+            margin-left: 200px;
+            background-color: lightgoldenrodyellow;
+        }
+
+
+        .right-container {
+            width: 800px;
+            height: 500px;
+            background-color: lightcyan;
+        }
+
+        .right-container>.left {
+            height: 100%;
+            margin-right: 200px;
+            background-color: lightgoldenrodyellow;
+        }
+
+        .right-container>.right {
+            height: 100%;
+            float: right;
+            width: 200px;
+            background-color: rgb(11, 91, 211);
+        }
+
+        .right-htmlSync-container {
+            width: 800px;
+            height: 500px;
+            background-color: lightcyan;
+        }
+
+        .right-htmlSync-container>.left {
+            float: left;
+            height: 100%;
+            width: 100%;
+        }
+
+        .right-htmlSync-container .left-content {
+            height: 100%;
+            margin-right: 200px;
+            background-color: lightslategray;
+        }
+
+        .right-htmlSync-container>.right {
+            height: 100%;
+            float: left;
+            width: 200px;
+            background-color: rgb(174, 255, 0);
+            margin-left: -200px;
+        }
+    </style>
+    <h3>左侧固定</h3>
+    <div class="left-container">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+
+    <h3>右侧固定</h3>
+    <div class="right-container">
+        <div class="right"></div>
+        <div class="left"></div>
+    </div>
+
+    <h3>右侧固定 HTML 结构一致</h3>
+    <div class="right-htmlSync-container">
+        <div class="left">
+            <div class="left-content"></div>
+        </div>
+        <div class="right"></div>
+    </div>
+</body>
+
+</html>
