@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            width: 400px;
+            height: 400px;
+            background-color: lightgoldenrodyellow;
+        }
+
+        .left {
+            height: 100%;
+            background-color: aqua;
+            /* bfc */
+            display: flow-root;
+        }
+
+        .right {
+                        width: 100px;
+            float: right;
+            height: 100%;
+            background-color: lightgreen;
+
+        }
+    </style>
+    <div class="container">
+        <div class="right"></div>
+        <div class="left">dasdfdsfdsfddasdfdsfdsfdsfdfsdsfdsdsfdssasdasdasdasdasdfgdfgdsfdgfdsadsdasdsadasdfdsfdsfdsfdfsdsfdsdsdasdfdsfdsfdsfdfsdsfdsdsfdssasdasdasdasdasdfgdfgdsfdgfdsadsdasdsadasdfdsfdsfdsfdfsdsfdsdsfdssasdasdasdasdasdfgdfgdsfdgfdsadsdasdsadasdfdsfdsfdsfdfsdsfdsdsfdssasdasdasdasdasdfgdfgdsfdgfdsadsdasdsafdssasdasdasdasdasdfgdfgdsfdgfdsadsdasdsasfdfsdsfdsdsfdssasdasdasdasdasdfgdfgdsfdgfdsadsdasdsa</div>
+    </div>
+</body>
+
+</html>
