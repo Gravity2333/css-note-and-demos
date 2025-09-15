@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .fixed {
+            position: fixed;
+            bottom: 100px;
+            left: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: lightsalmon;
+        }
+
+        .absolute {
+            position: absolute;
+            right: 100px;
+            bottom: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: lightseagreen;
+        }
+    </style>
+    <div style="height: 9999px;"></div>
+    <div class="absolute">absolute</div>
+    <div class="fixed">fixed</div>
+
+    <div style="background-color: red;width: 100px;height: 100px;position: relative;
+    left:100%;;"></div>
+</body>
+
+</html>
