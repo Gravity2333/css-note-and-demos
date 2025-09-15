@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            font-size: 50px;
+            background-color: lightgray;
+            line-height: 0em;
+        }
+
+        .box {
+            display: inline-block;
+            width: 900px;
+            height: 200px;
+            background-color: lightgreen;
+        }
+     
+        .container::after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+            vertical-align: text-top;
+        }
+    </style>
+    <div class="container">
+        <span style="background-color: yellow;"></span>
+        <div class="box"></div>
+        x
+    </div>
+</body>
+
+</html>

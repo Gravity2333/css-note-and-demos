@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
     <style>
-        .fixed {
-            width: 200px;
-            height: 200px;
-            background-color: lightcoral;
+        html{
+            overflow-y: scroll;
+        }
+        .box{
             position: fixed;
-
             left: 0px;
-            bottom: 100px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            background-color: lightgray;
         }
     </style>
-    <div class="fixed"></div>
-    <div style="height: 9999px;"></div>
+    <div class="box"></div>
 </body>
-
 </html>
