@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <style>
+      .container {
+        display: flex;
+        width: 400px;
+        background-color: lightgray;
+      }
+
+      .container item{
+        min-width: 0px;
+      }
+
+      .ellipsis {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <div class="container">
+      <item>宽度不确定项</item>
+      <item style="background-color: yellow">
+        <p class="ellipsis">
+          文字内容文字内容文字内容文字内容文字内容文字内容文字内容
+        </p>
+      </item>
+    </div>
+  </body>
+</html>

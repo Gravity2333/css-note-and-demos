@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        .container {
+            width: 550px;
+            background-color: lightslategray;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-content: flex-start
+        }
+
+        .box {
+            flex: none;
+            width: 24%;
+            height: 100px;
+            background-color: lightseagreen;
+            border: 1px solid black;
+        }
+
+        .box:last-child:nth-child(4n-1){
+            margin-right: calc( 24% + 4% / 3 );
+        }
+
+        .box:last-child:nth-child(4n-2){
+            margin-right: calc( 48% + 8% / 3 );
+        }
+    </style>
+
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

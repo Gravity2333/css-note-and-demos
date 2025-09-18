@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            padding: 20px;
+            width: 400px;
+            height: 100px;
+            background-color: lightgray;
+
+            display: flex;
+        }
+
+        .box {
+            flex-grow: 1;
+            border: 1px solid black;
+            max-width: 100px;
+            flex-basis: 100px;
+            height: 100px;
+            background-color: lightgoldenrodyellow;
+        }
+
+        .box2 {
+            flex-grow: 1;
+            border: 1px solid black;
+            flex-basis: 100px;
+            height: 100px;
+            background-color: lightseagreen;
+        }
+    </style>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+
+</html>

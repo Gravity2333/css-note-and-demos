@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        .container {
+            width: 100px;
+            background-color: lightblue;
+            display: flex;
+        }
+
+        .item1 {
+            /* width: 100px; */
+            flex: 0 0 0px;
+            height: 200px;
+            background-color: greenyellow;
+            border: 1px solid black;
+            flex: 1 1;
+            width: 0px;
+            /* min-width: 0; */
+        }
+
+        .item2 {
+            /* width: 200px; */
+            flex: 0 0 0px;
+            height: 200px;
+            background-color: plum;
+            border: 1px solid black;
+            flex: 1 1 ;
+            width: 0px;
+        }
+    </style>
+    <div class="container">
+        <div class="item1">xxxxxxxxxxxxxx</div>
+        <div class="item2"></div>
+    </div>
+</body>
+
+</html>

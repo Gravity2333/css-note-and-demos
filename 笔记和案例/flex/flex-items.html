@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            height: 300px;
+            width: 300px;
+            background-color: lightslategray;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: space-evenly;
+        }
+
+        .box {
+            border: 1px solid black;
+            width: calc( 100% - 14px );
+            background-color: yellow;
+        }
+    </style>
+    <div class="container">
+        <div style="width: 10px;align-self: stretch;background-color: red;border: 1px solid black;"></div>
+        <div class="box"> align-content: space-evenly; align-items: center </div>
+        <div style="width: 10px;align-self: stretch;background-color: red;border: 1px solid black;"></div>
+        <div class="box" style="height: 50px;width: 100px;"> align-items: center height: 50px</div>
+        <div class="box" style="height: 100px;width: 100px;">  align-items: center height: 100px</div>
+        <div style="width: 10px;align-self: stretch;background-color: red;border: 1px solid black;"></div>
+        <div class="box">  align-content: space-evenly;align-items: center</div>
+    </div> 
+</body>
+
+</html>

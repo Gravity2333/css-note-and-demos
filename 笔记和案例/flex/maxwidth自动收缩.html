@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>flex-wrap 示例2</title>
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: nowrap; /* 仍然不换行 */
+      width: 300px;
+      border: 2px solid #333;
+      height: 200px;
+    }
+    .item {
+      width: 200px;        /* 初始宽度 */
+      max-width: 100%;
+      height: 100px;
+      background-color: lightgreen;
+      border: 1px solid black;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h3>使用 max-width:100% → 自动收缩</h3>
+  <div class="container">
+    <div class="item">子项1</div>
+    <div class="item">子项2</div>
+  </div>
+</body>
+</html>
