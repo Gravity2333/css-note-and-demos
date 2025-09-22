@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            width: 100%;
+            display: grid;
+
+            grid-template-columns:  repeat(auto-fill,minmax(100px,fit-content(200px)));
+            grid-auto-rows: 200px;
+        }
+
+        .box{
+            /* word-break: break-all;+ */
+            min-width: 100px;
+            background-color: lightgoldenrodyellow;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+    <div class="container">
+        <div class="box">dasfdgfhdasfdgdasfdgfhdasfd</div>
+        <div class="box">dasfdgfhdasfdg</div>
+        <div class="box">dasfdgfhdasfdg</div>
+        <div class="box">dasfdgfhdasfdg</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        html,body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .conatiner {
+            max-height: 300px;
+            width: 500px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(100px,150px));
+            grid-template-rows: repeat(auto-fill,100px);
+            gap: 0;
+            /* 确保无间距 */
+            background-color: lightslategray;
+        }
+
+        .box {
+            box-sizing: border-box;
+            /* 避免 border/padding 增加宽度 */
+            border: 1px solid beige;
+            background-color: lightblue;
+        }
+    </style>
+    <div class="conatiner">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <!-- <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div> -->
+        <!-- <div class="box"></div> -->
+        <!-- <div class="box"></div> -->
+        <!-- <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div> -->
+    </div>
+
+    <div style="width: max-content;word-break: break-all;">xxxxxxx</div>
+</body>
+
+</html>
