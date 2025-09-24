@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            perspective: 400px;
+        }
+
+        @keyframes move {
+            0% {
+                background-color: lightgoldenrodyellow;
+            }
+
+            10% {
+                background-color: lightseagreen;
+            }
+
+            20% {
+                background-color: lightblue;
+            }
+
+            100% {
+                background-color: lightpink;
+            }
+        }
+
+        .box {
+            margin: 300px;
+            width: 200px;
+            height: 200px;
+            background-color: lightslategrey;
+        }
+
+        .box:hover {
+            animation: move 4s linear 0ms infinite;
+        }
+    </style>
+
+    <div class="box"></div>
+</body>
+
+</html>
