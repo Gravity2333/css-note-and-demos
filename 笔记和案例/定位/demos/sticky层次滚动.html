@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            margin: 100px;
+            width: 300px;
+            height: 500px;
+            background-color: lightslategrey;
+            overflow: auto;
+        }
+
+        .sticky{
+            height: 20px;
+            width: 50px;
+            background-color: lightcoral;
+            position: sticky;
+
+
+            top: 50px;
+        }
+
+        .item{
+            position: relative;
+            z-index: 0;
+        }
+
+        .item>li{
+            background-color: lightsalmon;
+            border: 1px dashed black;
+            line-height: 32px;
+        }
+
+        .comment{
+            border: 1px dashed black;
+            line-height: 32px;
+            background-color: red;
+
+            position: sticky;
+            bottom: 100px;
+            z-index: -1;
+        }
+    </style>
+
+    <div class="container">
+        <div style="height: 300px"></div>
+        <div class="item">
+            <li>NEWS 1</li>
+            <li>NEWS 2</li>
+            <li>NEWS 3</li>
+            <li>NEWS 4</li>
+            <li>NEWS 5</li>
+
+            <div class="comment">GOOD!</div>
+        </div>
+        <div class="item">
+            <li>NEWS 1</li>
+            <li>NEWS 2</li>
+            <li>NEWS 3</li>
+            <li>NEWS 4</li>
+            <li>NEWS 5</li>
+
+            <div class="comment">GOOD!</div>
+        </div>
+    </div>
+</body>
+</html>
