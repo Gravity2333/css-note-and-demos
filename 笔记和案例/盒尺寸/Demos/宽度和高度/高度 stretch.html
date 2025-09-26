@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            box-sizing: border-box;
+            width: 300px;
+            height: 300px;
+            padding: 20px 0px;
+            border: 1px solid brown;
+        }
+
+        .box {
+            /* display: inline-block; */
+            width: 100px;
+            height: -webkit-fill-available;
+            height: -moz-available;
+            height: stretch;
+            background-color: lightgreen;
+        }
+    </style>
+    <div class="container">
+        <div style="height:100px;background-color: lightpink;"></div>
+        <div class="box"></div>
+    </div>
+
+</body>
+
+</html>
