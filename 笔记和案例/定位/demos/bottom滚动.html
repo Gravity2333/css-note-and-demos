@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom Sticky Real</title>
+    <style>
+        .container {
+            height: 300px;
+            width: 300px;
+            overflow: auto;
+            background-color: lightblue;
+            border: 1px solid #000;
+        }
+
+        .content {
+            display: flow-root;
+            /* height: 800px; */
+            /* 内容比容器高，产生滚动 */
+            background-color: pink;
+            /* display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 20px; */
+        }
+
+        .box {
+            height: 50px;
+            background-color: green;
+        }
+
+        .sticky-bottom {
+            position: sticky;
+            bottom: 0;
+            height: 50px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <!-- <div  class="box">Bottom Sticky</div> -->
+            <div style="margin-top: 750px;" class="sticky-bottom">Bottom Sticky</div>
+
+        </div>
+    </div>
+</body>
+
+</html>
