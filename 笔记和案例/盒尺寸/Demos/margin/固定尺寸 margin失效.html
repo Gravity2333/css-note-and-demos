@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Margin Overflow Example</title>
+<style>
+  .container {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    overflow: auto; /* 去掉 overflow:hidden/visible 可以看到效果 */
+  }
+
+  .child {
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    margin-right: 50px; /* 超出 container 的 margin */
+    margin-bottom: 50px; /* 超出 container 的 margin */
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="child"></div>
+  </div>
+</body>
+</html>
