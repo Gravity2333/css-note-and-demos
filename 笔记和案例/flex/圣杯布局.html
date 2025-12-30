@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            background-color: lightgray;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: stretch;
+            height: 600px;
+        }
+
+        .centered {
+            order: 2;
+            background-color: lightgray;
+            height: 100%;
+            flex: 1;
+        }
+
+        .left {
+            order: 1;
+            background-color: lightgoldenrodyellow;
+            height: 100%;
+            flex: none;
+            width: 200px;
+        }
+
+        .right {
+            order: 3;
+            background-color: lightskyblue;
+            height: 100%;
+            flex: none;
+            width: 200px;
+        }
+    </style>
+    <div class="container">
+        <div class="centered"> centered </div>
+        <div class="left"> left </div>
+        <div class="right"> right </div>
+    </div>
+</body>
+
+</html>
