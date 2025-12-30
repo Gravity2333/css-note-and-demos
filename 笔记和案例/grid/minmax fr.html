@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            width: 800px;
+            height: 600px;
+            background-color: skyblue;
+            display: grid;
+
+
+            grid-template-columns: minmax(100px, 800px) minmax(100px, 800px) minmax(100px, 1fr);
+            /* grid-template-columns: max-content; */
+            justify-content: stretch;
+        }
+
+        .item {
+            height: 100px;
+            background-color: lightpink;
+            border-style: solid;
+            /* max-width: 70px; */
+            /* min-width: 60px; */
+        }
+    </style>
+    <pre> TEST  minmax(100px,1fr)</pre>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 800px;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f0f0f0;
+            border: 2px solid #333;
+        }
+        
+        .grid {
+            display: grid;
+            gap: 10px;
+            margin: 20px 0;
+            padding: 10px;
+            background: white;
+            border: 1px solid #ccc;
+        }
+        
+        .item {
+            padding: 20px;
+            background: lightblue;
+            border: 1px solid blue;
+        }
+        
+        .long-text {
+            background: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <h1>auto vs minmax(min-content, max-content) 区别演示</h1>
+    
+    <!-- 场景1: justify-content: stretch -->
+    <div class="container">
+        <h2>场景1: justify-content: stretch (有额外空间)</h2>
+        <p>容器宽度 800px，内容较少，有大量额外空间</p>
+        
+        <h3>使用 auto:</h3>
+        <div class="grid" style="
+            grid-template-columns: auto;
+            justify-content: stretch;
+        ">
+            <div class="item">较短的文本</div>
+        </div>
+        <p>auto: 会拉伸填满整个容器宽度</p>
+        
+        <h3>使用 minmax(min-content, max-content):</h3>
+        <div class="grid" style="
+            grid-template-columns: minmax(min-content, max-content);
+            justify-content: stretch;
+        ">
+            <div class="item">较短的文本</div>
+        </div>
+        <p>minmax: 即使设置了 stretch，也只会达到 max-content 宽度，不会继续拉伸</p>
+    </div>
+    
+    <!-- 场景2: 长内容测试 -->
+    <div class="container">
+        <h2>场景2: 长内容 (测试 max-content 行为)</h2>
+        <p>容器宽度 800px，内容很长可能超过容器</p>
+        
+        <h3>使用 auto:</h3>
+        <div class="grid" style="
+            grid-template-columns: auto;
+            justify-content: stretch;
+        ">
+            <div class="item long-text">这是一段非常非常非常非常非常非常非常非常非常非常长的文本内容，它会测试最大内容宽度</div>
+        </div>
+        <p>auto: 长文本会换行（因为 auto 允许压缩到 min-content）</p>
+        
+        <h3>使用 minmax(min-content, max-content):</h3>
+        <div class="grid" style="
+            grid-template-columns: minmax(min-content, max-content);
+            justify-content: stretch;
+        ">
+            <div class="item long-text">这是一段非常非常非常非常非常非常非常非常非常非常长的文本内容，它会测试最大内容宽度</div>
+        </div>
+        <p>minmax: 文本不会换行，因为会扩展到 max-content 宽度，可能超出容器</p>
+    </div>
+    
+    <!-- 场景3: 多列布局 -->
+    <div class="container">
+        <h2>场景3: 多列布局演示</h2>
+        <p>三列布局，容器有额外空间</p>
+        
+        <h3>使用 auto (三列):</h3>
+        <div class="grid" style="
+            grid-template-columns: auto auto auto;
+            justify-content: stretch;
+            width: 800px;
+        ">
+            <div class="item">项目1</div>
+            <div class="item">稍长一些的项目2</div>
+            <div class="item">项目3</div>
+        </div>
+        <p>auto: 三列平均分配额外空间，每列都拉伸</p>
+        
+        <h3>使用 minmax (三列):</h3>
+        <div class="grid" style="
+            grid-template-columns: 
+                minmax(min-content, max-content)
+                minmax(min-content, max-content)
+                minmax(min-content, max-content);
+            justify-content: stretch;
+            width: 800px;
+        ">
+            <div class="item">项目1</div>
+            <div class="item">稍长一些的项目2</div>
+            <div class="item">项目3</div>
+        </div>
+        <p>minmax: 每列只扩展到自己的 max-content 宽度，剩余空间空着</p>
+    </div>
+    <pre> TEST auto</pre>
+    <div class="container">
+
+        <div class="item">11</div>
+        <div class="item">112</div>
+        <div class="item">1123</div>
+        <div class="item">哈哈哈哈哈</div>
+        <div class="item">hello world</div>
+    </div>
+</body>
+
+</html>

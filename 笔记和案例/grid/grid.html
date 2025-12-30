@@ -1,0 +1,106 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            width: 600px;
+            height: 600px;
+            background-color: skyblue;
+
+            display: grid;
+            grid:  
+                "a a a b c c" 100px
+                "a a a b c c" 100px
+                "a a a b c c" 100px
+                "a a a b c c" 100px
+                "a a a d d d" 100px
+                "a a a d d d" 100px 
+                / 100px 100px 100px 100px 100px 100px
+                
+        }
+
+        .item {
+            background-color: lightgoldenrodyellow;
+            box-sizing: border-box;
+            border-style: solid;
+        }
+
+        .areaA {
+            background-color: lightsalmon;
+            /* row start / column start / row end / column end */
+            grid-area: a-start / a-start / a-end / a-end;
+        }
+
+        .areaB {
+            background-color: lightgreen;
+            grid-area: b;
+        }
+
+        .areaC {
+            background-color: lightcyan;
+            grid-area: c;
+        }
+
+        .areaD {
+            background-color: lightpink;
+            grid-area: d;
+        }
+    </style>
+
+    <div class="container">
+        <div class="item areaA"></div>
+        <div class="item areaB"></div>
+        <div class="item areaC"></div>
+        <div class="item areaD"></div>
+    </div>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            width: 600px;
+            height: 600px;
+            background-color: skyblue;
+
+            display: grid;
+            /* grid: auto-flow 100px / repeat(3, 200px) */
+             grid:  repeat(3, 200px) / auto-flow 100px
+        }
+
+        .item {
+            background-color: skyblue;
+            box-sizing: border-box;
+            border-style: solid;
+            font-weight: bold;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+
+    <div class="container">
+        <div class="item ">1</div>
+        <div class="item ">2</div>
+        <div class="item ">3</div>
+        <div class="item ">4</div>
+    </div>
+</body>
+
+</html>

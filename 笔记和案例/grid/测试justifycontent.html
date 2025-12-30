@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            width: 800px;
+            height:800px;
+            background-color: skyblue;
+
+            display: grid;
+            grid-template-columns: repeat(6, 100px);
+            grid-template-rows: repeat(6, 100px);
+            grid-template-areas:
+                "a a a b c c"
+                "a a a b c c"
+                "a a a b c c"
+                "a a a b c c"
+                "a a a d d d"
+                "a a a d d d";
+            place-content:space-evenly;
+            place-items: stretch;
+        }
+
+        .item {
+            background-color: lightgoldenrodyellow;
+            box-sizing: border-box;
+            border-style: solid;
+        }
+
+        .areaA {
+            background-color: lightsalmon;
+            /* row start / column start / row end / column end */
+            grid-area: a-start / a-start / a-end / a-end;
+        }
+
+        .areaB {
+            background-color: lightgreen;
+            grid-area: b;
+        }
+
+        .areaC {
+            background-color: lightcyan;
+            grid-area: c;
+        }
+
+        .areaD {
+            background-color: lightpink;
+            grid-area: d;
+        }
+    </style>
+
+    <div class="container">
+        <div class="item areaA"></div>
+        <div class="item areaB"></div>
+        <div class="item areaC"></div>
+        <div class="item areaD"></div>
+    </div>
+</body>
+
+</html>

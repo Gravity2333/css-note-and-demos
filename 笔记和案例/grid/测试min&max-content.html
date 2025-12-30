@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            width: 600px;
+            height: 600px;
+            background-color: skyblue;
+            display: grid;
+
+
+            grid-template-columns: min-content;
+            /* grid-template-columns: max-content; */
+        }
+
+        .item {
+            height: 100px;
+            background-color: lightpink;
+            border-style: solid;
+            /* max-width: 70px; */
+            min-width: 60px;
+        }
+    </style>
+    <pre> TEST min-content => max(min-width,min-content)  max-content => min(max-width,max-content)</pre>
+    <div class="container">
+
+        <div class="item">11</div>
+        <div class="item">112</div>
+        <div class="item">1123</div>
+        <div class="item">哈哈哈哈哈</div>
+        <div class="item">hello world</div>
+    </div>
+</body>
+
+</html>
