@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        html,body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .conatiner {
+            /* width: 200px; */
+            display: grid;
+            grid-template-columns: repeat(3,200px);
+
+            gap: 0;
+            /* 确保无间距 */
+            background-color: lightslategray;
+
+            grid-auto-rows: 100px;
+            grid-auto-columns: 300px;
+            /* grid-auto-flow: column; */
+        }
+
+        .box {
+            box-sizing: border-box;
+            /* 避免 border/padding 增加宽度 */
+            border: 1px solid beige;
+            /* 移除边框 */
+            background-color: lightblue;
+        }
+    </style>
+    <div class="conatiner">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+
+        <div style="background-color: pink;" class="box">10 hide</div>
+        <div style="background-color: pink;" class="box">11 hide</div>
+             <div style="background-color: pink;" class="box">12 hide</div>
+            <div style="background-color: pink;" class="box">13 hide</div>
+             <!-- <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div> -->
+    </div>
+</body>
+
+</html>
