@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            width: 600px;
+            height: 500px;
+            background-color: lightslategray;
+
+            display: grid;
+            grid-template-columns: minmax(100px,400px) minmax(100px,200px);
+            /* grid-auto-rows: min-content; */
+
+            justify-content: start;
+        }
+
+
+
+        .box {
+            background-color: yellow;
+            border: 1px solid black;
+            height: 90%;
+            /* word-break: break-all; */
+        }
+    </style>
+<!-- " -->
+    <div class="container">
+        <!-- <div class="box">1</div> -->
+        <div class="box">hello</div>
+        <div class="box" ></div>
+        <!-- <div class="box">1</div> -->
+        <!-- <div class="box">12</div>
+        <div class="box">123</div>
+        <div class="box">1234</div>
+        <div class="box">12345</div>
+        <div class="box">123456</div> -->
+        <!-- <div class="box" style="min-width: 0px;"><div style="display: inline-block;width: 200px;height: 100px;background-color: red;"></div>helloworldhelloworld</div> -->
+    </div>
+</body>
+
+</html>

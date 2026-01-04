@@ -19,8 +19,8 @@
 
         .box {
             border-top: solid;
-            width: 1000px;
-            height: 300px;
+            width: 300px;
+            height: 10000px;
             background-color: pink;
             text-align: center;
             /* display: flex;
@@ -28,18 +28,20 @@
         }
 
         .sticky {
+           
             display: inline-block;
-            height: 100%;
-            width: 100px;
+            height: 100px;
+            width: 100%;
             background-color: yellow;
             position: sticky;
-            right: 0px;
+            bottom: 0px;
             
         }
     </style>
 
     <div class="container">
         <div class="box">
+            <div style="height: 1000px;"></div>
             <div class="sticky"></div>
         </div>
     </div>
