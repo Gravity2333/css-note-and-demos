@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+    </style>
+    <div class="container">
+        hello
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+        container.addEventListener('click', () => {
+            if (document.fullscreenElement !== container) {
+                if (container.requestFullscreen) {
+                    container.requestFullscreen();
+                } else if (container.webkitRequestFullscreen) { /* Safari */
+                    container.webkitRequestFullscreen();
+                } else if (container.msRequestFullscreen) { /* IE11 */
+                    container.msRequestFullscreen();
+                }
+            } else {
+                document.exitFullscreen();
+            }
+
+        });
+        container.addEventListener('fullscreenchange', () => {
+            // 检查 document.fullscreenElement 来确认当前是否处于全屏状态
+            console.log('isFullscreenchange', document.fullscreenElement === container);
+        })
+    </script>
+</body>
+
+</html>

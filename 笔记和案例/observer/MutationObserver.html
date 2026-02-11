@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            position: fixed;
+            inset: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+
+        .container1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+    </style>
+    <div class="container" draggable="true">
+        hello
+    </div>
+    <div class="container1" draggable="true">
+        world
+    </div>
+    <script>
+        const container = document.querySelector('.container');
+        const observer = new MutationObserver(mutations => {
+            console.log(mutations)
+        })
+        container.addEventListener('click', () => {
+            container.innerHTML = '<span>world</span>';
+        })
+
+        container.addEventListener('drop', (e) => {
+            e.preventDefault();
+            console.log('drop event', e)
+        })
+
+        container.addEventListener('drag', (e) => {
+            e.preventDefault();
+            container.style.left = e.clientX + 'px';
+            container.style.top = e.clientY + 'px';
+        })
+        container.addEventListener('dragover', (e) => {
+            e.preventDefault();
+        })
+        observer.observe(container, {
+            attributes: true,
+            childList: true,
+            subtree: true,
+            characterData: true
+        })
+    </script>
+</body>
+
+</html>

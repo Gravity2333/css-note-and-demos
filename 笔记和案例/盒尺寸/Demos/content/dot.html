@@ -20,7 +20,7 @@
         .dot::after {
             display: inline-block;
             content: '...\A..\A.\A';
-            white-space: pre-wrap;
+            white-space: pre-line;
             animation: 3s dot infinite step-start both;
         }
 
@@ -31,6 +31,9 @@
 
             66% {
                 transform: translateY(-1em);
+            }
+            100% {
+                transform: translateY(0);
             }
 
         }

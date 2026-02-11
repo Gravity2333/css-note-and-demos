@@ -10,8 +10,7 @@
 <body>
     <style>
         .container {
-            padding: 20px;
-            width: 400px;
+            width: 1000px;
             height: 100px;
             background-color: lightgray;
 
@@ -19,26 +18,28 @@
         }
 
         .box {
-            flex-shrink:2;
+   
+            flex-shrink: 0.5;
             border: 1px solid black;
-            flex-basis: 300px;
-            overflow: scroll;
+            flex-basis: 400px;
+            overflow: hidden;
             height: 100px;
             background-color: lightgoldenrodyellow;
         }
 
         .box2 {
-            flex-shrink: 1;
+            flex-shrink: 0.11;
             border: 1px solid black;
-            flex-basis: 300px;
+            flex-basis: 2000px;
             height: 100px;
             background-color: lightseagreen;
         }
     </style>
     <div class="container">
-        <div class="box">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+        <div class="box"></div>
         <div class="box2"></div>
     </div>
 </body>
 <!--  -->
+
 </html>
