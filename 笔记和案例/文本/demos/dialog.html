@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog</title>
+</head>
+
+<body>
+
+
+    <style>
+        .container {
+            position: fixed;
+            inset: 0px;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        .container::after {
+            display: inline-block;
+            content: '';
+            height: 100%;
+            width: 0px;
+            background-color: red;
+            vertical-align: middle;
+        }
+
+        .container>.dialog {
+            display: inline-block;
+            width: 300px;
+            height: 200px;
+            background-color: lightyellow;
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
+    <div class="container">
+        <div class="dialog">dialog</div>
+    </div>
+</body>
+
+</html>
