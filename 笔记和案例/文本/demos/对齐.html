@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="CSS世界demo实例演示页面之 动态font-size下的图片垂直居中效果" />
+    <meta name="keywords" content="font-size" />
+    <meta name="author" content="张鑫旭, zhangxinxu" />
+    <title>动态font-size下的图片垂直居中效果 » CSS世界demo演示</title>
+    <script>var _speedMark = new Date();</script>
+    <link rel="stylesheet" href="/common/css/demo.css?0313">
+    <style>
+        .demo p {
+            font-size: 14px;
+            animation: fontSize 5s infinite alternate ease-in-out;
+        }
+
+        p>img {
+            width: 16px;
+            height: 16px;
+            /* 下面的ex实现是为了方便大家对比效果 */
+            /* vertical-align: .6ex; */
+            vertical-align: 25%;
+            position: relative;
+            top: 8px;
+        }
+
+        @keyframes fontSize {
+            to {
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+        .icon {
+            display: inline-block;
+            background-color: red;
+            width: 16px;
+            height: 16px;
+            vertical-align: .6ex;
+
+        }
+
+        p {
+            /* width: 1ch; */
+            /* font-family:serif */
+            /* font-family: sans-serif; */
+            /* font-family:monospace; */
+            /* font-family:cursive; */
+            /* font-family:fantasy; */
+            /* font-family: system-ui; */
+
+            /* font-style:italic; */
+
+            /* font-style:oblique; */
+        }
+
+        .cover {
+            position: fixed;
+            inset: 0px;
+            background-color: red;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* word-wrap: break-word; */
+            /* word-break: break-all; */
+        }
+    </style>
+    <!-- <div class="cover">cover</div> -->
+    <div class="header">
+        <a href="../" class="logo" title="回到demo首页"></a>
+    </div>
+
+  
+    <div class="main" style="height: 999px">
+        <h1>动态font-size下的图片垂直居中效果实例页面</h1>
+        <div class="show">
+            <div class="demo">
+
+                <p>文字xssadawdaw
+                    <span class="icon"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+  <div class="box">xssadassswdwdaw231----awd2222aw</div>
+    <div class="footer">
+        <div>Designed &amp; Powered by <a href="https://www.zhangxinxu.com/" target="_blank">zhangxinxu</a></div>
+        <div><a href="/" class="index">Demo索引地图</a> &emsp; <a href="//bbs.cssworld.cn/">访问论坛</a></div>
+    </div>
+    <div class="ad_bottom"></div>
+    <script src="/common/js/all.js"></script>
+    <script>
+        DlHighlight.HELPERS.highlightByName("code", "pre");
+
+        // 广告和推广
+        var eleHeader = document.querySelector('.header');
+        if (eleHeader && window.fetch) {
+            // 广告处理
+            fetch('https://www.zhangxinxu.com/php/_ajax-support.php').then(function (response) {
+                return response.json();
+            }).then(function (json) {
+                if (json.code == 0) {
+                    var data = json.data;
+                    eleHeader.insertAdjacentHTML("afterbegin", '<style>.mmbb{position:absolute;right:0; width:' + (data.width || 480) * 1.1 + 'px; height:inherit;background:url(' + data.image + ') no-repeat center; background-size:cover;}.mmbb img{display:none;box-shadow: -1px 1px rgba(0,0,0,.04);}.mmbb.active img{display:block;position: absolute;right: 0;top:100%;z-index:1;}@media screen and (max-width: 480px) {.mmbb{display:block;height:calc(6000vw / 414);width:100%;position:static;background-image:url(' + data.image + ');}.header{height:auto;}.logo{display:block;position:static;}}</style>	<iframe id="taIframe" frameborder="0" style="display:none;"></iframe><a href="' + data.url + '" target="_blank" class="mmbb" title="' + data.title + '" onclick="taIframe.src=\'https://www.zhangxinxu.com/sp/ta.php?from=cssworld&type=' + data.key + '&r=\' + Math.random();" rel="nofollow noopener"></a>');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
